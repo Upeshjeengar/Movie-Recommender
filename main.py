@@ -30,21 +30,7 @@ def get_recommendations(title, cosine_sim=cosine_sim):
 #  Collaborative Filtering using SVD
 def collaborative_filtering(user_id):
     # Load Ratings Data for Collaborative Filtering
-    ratings = pd.read_csv('ratings_small.csv')
-
-    user_movie_matrix = ratings.pivot(index='userId', columns='movieId', values='rating')
-
-    # Calculate the correlation matrix
-    user_similarity = user_movie_matrix.corrwith(user_movie_matrix.loc[int(user_id)])
-
-    # Drop NaN values and sort the correlation values
-    user_similarity = user_similarity.dropna().sort_values(ascending=False)
-
-    # Get the top movie recommendations
-    top_movie_ids = user_similarity.index[:10]
-    top_movies = df2[df2['id'].isin(top_movie_ids)]['title'].tolist()
-
-    return top_movies
+    pass
 
 
 # Streamlit Interface
@@ -63,4 +49,4 @@ elif option == 'Collaborative Filtering':
   user_id = st.text_input('Enter your User ID:')
   if st.button('Recommend'):
       recommendations=collaborative_filtering(user_id)
-      st.write(recommendations)
+      st.write("Feature yet to be implemented")
