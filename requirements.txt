@@ -1,4 +1,4 @@
-surprise
+scikit-surprise
 scikit-learn
 pandas
 numpy
