@@ -1,1 +1,1 @@
-<a href="https://movie-recommender-stream.streamlit.app/" target="_blank" rel="noopener noreferrer">Deployed here</a>
+<a href="https://movie-recommender-nlp.streamlit.app/"  rel="noopener noreferrer">Deployed here</a>
