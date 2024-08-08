@@ -48,5 +48,5 @@ if option == 'Content-Based':
 elif option == 'Collaborative Filtering':
   user_id = st.text_input('Enter your User ID:')
   if st.button('Recommend'):
-      recommendations=collaborative_filtering(user_id)
+      #recommendations=collaborative_filtering(user_id)
       st.write("Feature yet to be implemented")
