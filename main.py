@@ -1,3 +1,4 @@
+import requests
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -5,7 +6,26 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
 # Load Data
-df1 = pd.read_csv('https://firstbucket0125.s3.ap-south-1.amazonaws.com/data/tmdb_5000_credits.csv', engine="python")
+# df1 = pd.read_csv('https://firstbucket0125.s3.ap-south-1.amazonaws.com/data/tmdb_5000_credits.csv', engine="python")
+import requests
+
+# Define the URL of the file
+url = "https://firstbucket0125.s3.ap-south-1.amazonaws.com/data/tmdb_5000_credits.csv"
+
+# Download the file
+response = requests.get(url)
+
+# Check for successful download (status code 200)
+if response.status_code == 200:
+    # Specify the filename (optional, defaults to URL's last part)
+    filename = "tmdb_5000_credits.csv"
+
+    # Open the file in binary write mode
+    with open(filename, "wb") as file:
+        # Write the downloaded content to the file
+        file.write(response.content)
+    df1 = pd.read_csv(filename)
+
 df2 = pd.read_csv('tmdb_5000_movies.csv')
 df1.columns = ['id', 'tittle', 'cast', 'crew']
 df2 = df2.merge(df1, on='id')
