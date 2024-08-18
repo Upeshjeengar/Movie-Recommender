@@ -60,7 +60,7 @@ option = st.selectbox('Choose a recommendation type:',
                       ('Content-Based', 'Collaborative Filtering'))
 
 if option == 'Content-Based':
-  movie = st.text_input('Enter a movie title:')
+  movie = st.text_input('Enter a movie title:',placeholder='Avatar')
   if st.button('Recommend'):
     recommendations = get_recommendations(movie)
     st.write(recommendations)
