@@ -45,7 +45,7 @@ The notebook utilizes a sample dataset of movies and user ratings, which is eith
 
 1. **Clone the Repository:** Clone this repository to your local machine using:
    ```bash
-   git clone https://github.com/username/Movie-Recommender.git
+   git clone https://github.com/UpeshJeengar/Movie-Recommender.git
    ```
 2. **Open the Notebook:** Launch Jupyter Notebook or JupyterLab and open `getting_started_with_a_movie_recommendation_system.ipynb`.
 3. **Run the Cells:** Follow the instructions within the notebook. Execute the code cells in sequential order to build and evaluate the recommendation system.
