@@ -34,7 +34,7 @@ To run this notebook, you need the following dependencies installed:
 You can install the required libraries using the following command:
 
 ```bash
-pip install pandas numpy scikit-learn matplotlib seaborn scikit-surprise
+pip install -r requirements.txt
 ```
 
 ### Dataset
