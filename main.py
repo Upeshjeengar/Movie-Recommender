@@ -10,7 +10,7 @@ from sklearn.metrics.pairwise import linear_kernel
 import requests
 
 # Define the URL of the file
-url = "https://firstbucket0125.s3.ap-south-1.amazonaws.com/data/tmdb_5000_credits.csv"
+url = "https://docs.google.com/spreadsheets/d/1K-oHNXkERnQsHYJuWemOOK-dWNJYu9UoUmA0muS3SI4/pub?gid=828173673&single=true&output=csv"
 
 # Download the file
 response = requests.get(url)
