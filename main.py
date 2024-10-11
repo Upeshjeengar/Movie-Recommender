@@ -54,6 +54,22 @@ def collaborative_filtering(user_id):
 
 
 # Streamlit Interface
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+background-image: url("https://lva-accolades.net/wp-content/uploads/2024/03/Untitled-2-960x1200.jpeg");
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: local;
+}}
+[data-testid="stHeader"] {{
+background: rgba(0,0,0,0);
+}}
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title('Movie Recommendation System')
 
 option = st.selectbox('Choose a recommendation type:',
