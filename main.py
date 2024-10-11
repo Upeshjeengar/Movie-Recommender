@@ -62,8 +62,11 @@ option = st.selectbox('Choose a recommendation type:',
 if option == 'Content-Based':
   movie = st.text_input('Enter a movie title:',placeholder='Avatar')
   if st.button('Recommend'):
-    recommendations = get_recommendations(movie)
-    st.write(recommendations)
+    try:
+        recommendations = get_recommendations(movie)
+        st.write(recommendations)
+    except:
+        st.write(f'Movie {movie} not found in our database')
 
 elif option == 'Collaborative Filtering':
   user_id = st.text_input('Enter your User ID:')
